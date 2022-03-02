@@ -27,28 +27,28 @@ using OpenAPIDateConverter = Finbourne.Configuration.Sdk.Client.OpenAPIDateConve
 namespace Finbourne.Configuration.Sdk.Model
 {
     /// <summary>
-    /// ResourceListOfConfigurationSetSummary
+    /// ResourceListOfConfigurationItem
     /// </summary>
-    [DataContract(Name = "ResourceListOfConfigurationSetSummary")]
-    public partial class ResourceListOfConfigurationSetSummary : IEquatable<ResourceListOfConfigurationSetSummary>
+    [DataContract(Name = "ResourceListOfConfigurationItem")]
+    public partial class ResourceListOfConfigurationItem : IEquatable<ResourceListOfConfigurationItem>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResourceListOfConfigurationSetSummary" /> class.
+        /// Initializes a new instance of the <see cref="ResourceListOfConfigurationItem" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected ResourceListOfConfigurationSetSummary() { }
+        protected ResourceListOfConfigurationItem() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResourceListOfConfigurationSetSummary" /> class.
+        /// Initializes a new instance of the <see cref="ResourceListOfConfigurationItem" /> class.
         /// </summary>
         /// <param name="values">values (required).</param>
         /// <param name="href">href.</param>
         /// <param name="links">links.</param>
         /// <param name="nextPage">nextPage.</param>
         /// <param name="previousPage">previousPage.</param>
-        public ResourceListOfConfigurationSetSummary(List<ConfigurationSetSummary> values = default(List<ConfigurationSetSummary>), string href = default(string), List<Link> links = default(List<Link>), string nextPage = default(string), string previousPage = default(string))
+        public ResourceListOfConfigurationItem(List<ConfigurationItem> values = default(List<ConfigurationItem>), string href = default(string), List<Link> links = default(List<Link>), string nextPage = default(string), string previousPage = default(string))
         {
             // to ensure "values" is required (not null)
-            this.Values = values ?? throw new ArgumentNullException("values is a required property for ResourceListOfConfigurationSetSummary and cannot be null");
+            this.Values = values ?? throw new ArgumentNullException("values is a required property for ResourceListOfConfigurationItem and cannot be null");
             this.Href = href;
             this.Links = links;
             this.NextPage = nextPage;
@@ -59,7 +59,7 @@ namespace Finbourne.Configuration.Sdk.Model
         /// Gets or Sets Values
         /// </summary>
         [DataMember(Name = "values", IsRequired = true, EmitDefaultValue = false)]
-        public List<ConfigurationSetSummary> Values { get; set; }
+        public List<ConfigurationItem> Values { get; set; }
 
         /// <summary>
         /// Gets or Sets Href
@@ -92,7 +92,7 @@ namespace Finbourne.Configuration.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ResourceListOfConfigurationSetSummary {\n");
+            sb.Append("class ResourceListOfConfigurationItem {\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("  Href: ").Append(Href).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
@@ -118,15 +118,15 @@ namespace Finbourne.Configuration.Sdk.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ResourceListOfConfigurationSetSummary);
+            return this.Equals(input as ResourceListOfConfigurationItem);
         }
 
         /// <summary>
-        /// Returns true if ResourceListOfConfigurationSetSummary instances are equal
+        /// Returns true if ResourceListOfConfigurationItem instances are equal
         /// </summary>
-        /// <param name="input">Instance of ResourceListOfConfigurationSetSummary to be compared</param>
+        /// <param name="input">Instance of ResourceListOfConfigurationItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ResourceListOfConfigurationSetSummary input)
+        public bool Equals(ResourceListOfConfigurationItem input)
         {
             if (input == null)
                 return false;

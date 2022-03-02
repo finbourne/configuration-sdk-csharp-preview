@@ -12,6 +12,8 @@ Method | HTTP request | Description
 [**GenerateAccessToken**](ConfigurationSetsApi.md#generateaccesstoken) | **PUT** /api/sets/personal/me | [EXPERIMENTAL] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
 [**GetConfigurationItem**](ConfigurationSetsApi.md#getconfigurationitem) | **GET** /api/sets/{type}/{scope}/{code}/items/{key} | [EXPERIMENTAL] GetConfigurationItem: Get the specific configuration item within an existing set
 [**GetConfigurationSet**](ConfigurationSetsApi.md#getconfigurationset) | **GET** /api/sets/{type}/{scope}/{code} | [EXPERIMENTAL] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
+[**GetSystemConfigurationItems**](ConfigurationSetsApi.md#getsystemconfigurationitems) | **GET** /api/sets/system/{code}/items/{key} | [EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+[**GetSystemConfigurationSets**](ConfigurationSetsApi.md#getsystemconfigurationsets) | **GET** /api/sets/system/{code} | [EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
 [**ListConfigurationSets**](ConfigurationSetsApi.md#listconfigurationsets) | **GET** /api/sets | [EXPERIMENTAL] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
 [**UpdateConfigurationItem**](ConfigurationSetsApi.md#updateconfigurationitem) | **PUT** /api/sets/{type}/{scope}/{code}/items/{key} | [EXPERIMENTAL] UpdateConfigurationItem: Update a configuration item&#39;s value and/or description
 [**UpdateConfigurationSet**](ConfigurationSetsApi.md#updateconfigurationset) | **PUT** /api/sets/{type}/{scope}/{code} | [EXPERIMENTAL] UpdateConfigurationSet: Update the description of a configuration set
@@ -644,6 +646,162 @@ Name | Type | Description  | Notes
 | **200** | Success |  -  |
 | **400** | The details of the input related failure |  -  |
 | **404** | No configuration set exists with the provided identifiers |  -  |
+| **0** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsystemconfigurationitems"></a>
+# **GetSystemConfigurationItems**
+> ResourceListOfConfigurationItem GetSystemConfigurationItems (string code, string key, bool? reveal = null)
+
+[EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Finbourne.Configuration.Sdk.Api;
+using Finbourne.Configuration.Sdk.Client;
+using Finbourne.Configuration.Sdk.Model;
+
+namespace Example
+{
+    public class GetSystemConfigurationItemsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://www.lusid.com/configuration";
+            // Configure OAuth2 access token for authorization: oauth2
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConfigurationSetsApi(config);
+            var code = code_example;  // string | The code that identifies a system configuration set
+            var key = key_example;  // string | The key that identifies a system configuration item
+            var reveal = true;  // bool? | Whether to reveal the secrets (optional) 
+
+            try
+            {
+                // [EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+                ResourceListOfConfigurationItem result = apiInstance.GetSystemConfigurationItems(code, key, reveal);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ConfigurationSetsApi.GetSystemConfigurationItems: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **code** | **string**| The code that identifies a system configuration set | 
+ **key** | **string**| The key that identifies a system configuration item | 
+ **reveal** | **bool?**| Whether to reveal the secrets | [optional] 
+
+### Return type
+
+[**ResourceListOfConfigurationItem**](ResourceListOfConfigurationItem.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | The details of the input related failure |  -  |
+| **404** | No system configuration item exists with the provided identifiers |  -  |
+| **0** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsystemconfigurationsets"></a>
+# **GetSystemConfigurationSets**
+> ResourceListOfConfigurationSet GetSystemConfigurationSets (string code, bool? reveal = null)
+
+[EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Finbourne.Configuration.Sdk.Api;
+using Finbourne.Configuration.Sdk.Client;
+using Finbourne.Configuration.Sdk.Model;
+
+namespace Example
+{
+    public class GetSystemConfigurationSetsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://www.lusid.com/configuration";
+            // Configure OAuth2 access token for authorization: oauth2
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConfigurationSetsApi(config);
+            var code = code_example;  // string | The code that identifies a system configuration set
+            var reveal = true;  // bool? | Whether to reveal the secrets (optional) 
+
+            try
+            {
+                // [EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+                ResourceListOfConfigurationSet result = apiInstance.GetSystemConfigurationSets(code, reveal);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ConfigurationSetsApi.GetSystemConfigurationSets: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **code** | **string**| The code that identifies a system configuration set | 
+ **reveal** | **bool?**| Whether to reveal the secrets | [optional] 
+
+### Return type
+
+[**ResourceListOfConfigurationSet**](ResourceListOfConfigurationSet.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | The details of the input related failure |  -  |
+| **404** | No system configuration set exists with the provided identifiers |  -  |
 | **0** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
