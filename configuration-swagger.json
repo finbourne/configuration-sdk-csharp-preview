@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.202",
+    "version": "0.1.203",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -2495,16 +2495,6 @@
         },
         "additionalProperties": false
       },
-      "Code": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "ConfigurationItem": {
         "required": [
           "createdAt",
@@ -3019,10 +3009,14 @@
         "type": "object",
         "properties": {
           "scope": {
-            "$ref": "#/components/schemas/Scope"
+            "maxLength": 512,
+            "minLength": 1,
+            "type": "string"
           },
           "code": {
-            "$ref": "#/components/schemas/Code"
+            "maxLength": 512,
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -3161,16 +3155,6 @@
             "nullable": true
           },
           "previousPage": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Scope": {
-        "type": "object",
-        "properties": {
-          "scopeName": {
             "type": "string",
             "nullable": true
           }
