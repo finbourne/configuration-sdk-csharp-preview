@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.212",
+    "version": "0.1.213",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -2504,7 +2504,6 @@
           "lastModifiedAt",
           "lastModifiedBy",
           "ref",
-          "type",
           "value",
           "valueType"
         ],
@@ -2544,6 +2543,7 @@
           "type": {
             "type": "string",
             "description": "Defines how the value is presented.\r\nIf it is secret, the value will be hidden.\r\nIf it is text, the value will be in plain-text.",
+            "nullable": true,
             "readOnly": true
           },
           "valueType": {
@@ -2568,7 +2568,6 @@
           "isSecret",
           "key",
           "ref",
-          "type",
           "value",
           "valueType"
         ],
@@ -2585,6 +2584,7 @@
           "type": {
             "type": "string",
             "description": "Defines how the value is presented.\r\nIf it is secret, the value will be hidden.\r\nIf it is text, the value will be in plain-text.",
+            "nullable": true,
             "readOnly": true
           },
           "valueType": {
