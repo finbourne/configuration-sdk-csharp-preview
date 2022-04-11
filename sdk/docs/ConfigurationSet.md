@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **Items** | [**List&lt;ConfigurationItemSummary&gt;**](ConfigurationItemSummary.md) | The collection of the configuration items that this set contains. | [optional] 
 **Id** | [**ResourceId**](ResourceId.md) |  | 
 **Type** | **string** | The type (personal or shared) of the configuration set | 
+**Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

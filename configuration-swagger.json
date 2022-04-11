@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.228",
+    "version": "0.1.229",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -2522,6 +2522,13 @@
             "type": "string",
             "description": "The reference to the configuration item",
             "readOnly": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -2557,6 +2564,13 @@
             "type": "string",
             "description": "The reference to the configuration item",
             "readOnly": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -2610,6 +2624,13 @@
           "type": {
             "type": "string",
             "description": "The type (personal or shared) of the configuration set"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -2628,6 +2649,13 @@
           "type": {
             "type": "string",
             "description": "The type (personal or shared) of the configuration set"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -2949,6 +2977,13 @@
             "type": "string",
             "description": "The reference to the Personal Access Token",
             "readOnly": true
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Link"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false,
