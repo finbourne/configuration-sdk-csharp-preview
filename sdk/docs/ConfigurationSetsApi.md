@@ -4,26 +4,26 @@ All URIs are relative to *https://www.lusid.com/configuration*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AddConfigurationToSet**](ConfigurationSetsApi.md#addconfigurationtoset) | **POST** /api/sets/{type}/{scope}/{code}/items | [EXPERIMENTAL] AddConfigurationToSet: Add a configuration item to an existing set
-[**CreateConfigurationSet**](ConfigurationSetsApi.md#createconfigurationset) | **POST** /api/sets | [EXPERIMENTAL] CreateConfigurationSet: Create a configuration set
-[**DeleteAccessToken**](ConfigurationSetsApi.md#deleteaccesstoken) | **DELETE** /api/sets/personal/me | [EXPERIMENTAL] DeleteAccessToken: Delete any stored Personal Access Token for the current user
-[**DeleteConfigurationItem**](ConfigurationSetsApi.md#deleteconfigurationitem) | **DELETE** /api/sets/{type}/{scope}/{code}/items/{key} | [EXPERIMENTAL] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
-[**DeleteConfigurationSet**](ConfigurationSetsApi.md#deleteconfigurationset) | **DELETE** /api/sets/{type}/{scope}/{code} | [EXPERIMENTAL] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
-[**GenerateAccessToken**](ConfigurationSetsApi.md#generateaccesstoken) | **PUT** /api/sets/personal/me | [EXPERIMENTAL] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
-[**GetConfigurationItem**](ConfigurationSetsApi.md#getconfigurationitem) | **GET** /api/sets/{type}/{scope}/{code}/items/{key} | [EXPERIMENTAL] GetConfigurationItem: Get the specific configuration item within an existing set
-[**GetConfigurationSet**](ConfigurationSetsApi.md#getconfigurationset) | **GET** /api/sets/{type}/{scope}/{code} | [EXPERIMENTAL] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
-[**GetSystemConfigurationItems**](ConfigurationSetsApi.md#getsystemconfigurationitems) | **GET** /api/sets/system/{code}/items/{key} | [EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
-[**GetSystemConfigurationSets**](ConfigurationSetsApi.md#getsystemconfigurationsets) | **GET** /api/sets/system/{code} | [EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
-[**ListConfigurationSets**](ConfigurationSetsApi.md#listconfigurationsets) | **GET** /api/sets | [EXPERIMENTAL] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
-[**UpdateConfigurationItem**](ConfigurationSetsApi.md#updateconfigurationitem) | **PUT** /api/sets/{type}/{scope}/{code}/items/{key} | [EXPERIMENTAL] UpdateConfigurationItem: Update a configuration item&#39;s value and/or description
-[**UpdateConfigurationSet**](ConfigurationSetsApi.md#updateconfigurationset) | **PUT** /api/sets/{type}/{scope}/{code} | [EXPERIMENTAL] UpdateConfigurationSet: Update the description of a configuration set
+[**AddConfigurationToSet**](ConfigurationSetsApi.md#addconfigurationtoset) | **POST** /api/sets/{type}/{scope}/{code}/items | [EARLY ACCESS] AddConfigurationToSet: Add a configuration item to an existing set
+[**CreateConfigurationSet**](ConfigurationSetsApi.md#createconfigurationset) | **POST** /api/sets | [EARLY ACCESS] CreateConfigurationSet: Create a configuration set
+[**DeleteAccessToken**](ConfigurationSetsApi.md#deleteaccesstoken) | **DELETE** /api/sets/personal/me | [EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+[**DeleteConfigurationItem**](ConfigurationSetsApi.md#deleteconfigurationitem) | **DELETE** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
+[**DeleteConfigurationSet**](ConfigurationSetsApi.md#deleteconfigurationset) | **DELETE** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
+[**GenerateAccessToken**](ConfigurationSetsApi.md#generateaccesstoken) | **PUT** /api/sets/personal/me | [EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+[**GetConfigurationItem**](ConfigurationSetsApi.md#getconfigurationitem) | **GET** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set
+[**GetConfigurationSet**](ConfigurationSetsApi.md#getconfigurationset) | **GET** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
+[**GetSystemConfigurationItems**](ConfigurationSetsApi.md#getsystemconfigurationitems) | **GET** /api/sets/system/{code}/items/{key} | [EARLY ACCESS] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+[**GetSystemConfigurationSets**](ConfigurationSetsApi.md#getsystemconfigurationsets) | **GET** /api/sets/system/{code} | [EARLY ACCESS] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+[**ListConfigurationSets**](ConfigurationSetsApi.md#listconfigurationsets) | **GET** /api/sets | [EARLY ACCESS] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
+[**UpdateConfigurationItem**](ConfigurationSetsApi.md#updateconfigurationitem) | **PUT** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] UpdateConfigurationItem: Update a configuration item&#39;s value and/or description
+[**UpdateConfigurationSet**](ConfigurationSetsApi.md#updateconfigurationset) | **PUT** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] UpdateConfigurationSet: Update the description of a configuration set
 
 
 <a name="addconfigurationtoset"></a>
 # **AddConfigurationToSet**
 > ConfigurationSet AddConfigurationToSet (string type, string scope, string code, CreateConfigurationItem createConfigurationItem, string userId = null)
 
-[EXPERIMENTAL] AddConfigurationToSet: Add a configuration item to an existing set
+[EARLY ACCESS] AddConfigurationToSet: Add a configuration item to an existing set
 
 ### Example
 ```csharp
@@ -53,7 +53,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] AddConfigurationToSet: Add a configuration item to an existing set
+                // [EARLY ACCESS] AddConfigurationToSet: Add a configuration item to an existing set
                 ConfigurationSet result = apiInstance.AddConfigurationToSet(type, scope, code, createConfigurationItem, userId);
                 Debug.WriteLine(result);
             }
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 # **CreateConfigurationSet**
 > ConfigurationSet CreateConfigurationSet (CreateConfigurationSet createConfigurationSet, string userId = null)
 
-[EXPERIMENTAL] CreateConfigurationSet: Create a configuration set
+[EARLY ACCESS] CreateConfigurationSet: Create a configuration set
 
 ### Example
 ```csharp
@@ -133,7 +133,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] CreateConfigurationSet: Create a configuration set
+                // [EARLY ACCESS] CreateConfigurationSet: Create a configuration set
                 ConfigurationSet result = apiInstance.CreateConfigurationSet(createConfigurationSet, userId);
                 Debug.WriteLine(result);
             }
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 # **DeleteAccessToken**
 > void DeleteAccessToken ()
 
-[EXPERIMENTAL] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+[EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
 
 ### Example
 ```csharp
@@ -207,7 +207,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+                // [EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
                 apiInstance.DeleteAccessToken();
             }
             catch (ApiException  e)
@@ -250,7 +250,7 @@ void (empty response body)
 # **DeleteConfigurationItem**
 > void DeleteConfigurationItem (string type, string scope, string code, string key, string userId = null)
 
-[EXPERIMENTAL] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
+[EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
 
 ### Example
 ```csharp
@@ -280,7 +280,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
+                // [EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
                 apiInstance.DeleteConfigurationItem(type, scope, code, key, userId);
             }
             catch (ApiException  e)
@@ -332,7 +332,7 @@ void (empty response body)
 # **DeleteConfigurationSet**
 > void DeleteConfigurationSet (string type, string scope, string code, string userId = null)
 
-[EXPERIMENTAL] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
+[EARLY ACCESS] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
 
 ### Example
 ```csharp
@@ -361,7 +361,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
+                // [EARLY ACCESS] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
                 apiInstance.DeleteConfigurationSet(type, scope, code, userId);
             }
             catch (ApiException  e)
@@ -412,7 +412,7 @@ void (empty response body)
 # **GenerateAccessToken**
 > PersonalAccessToken GenerateAccessToken (string action = null)
 
-[EXPERIMENTAL] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+[EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
 
 ### Example
 ```csharp
@@ -438,7 +438,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+                // [EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
                 PersonalAccessToken result = apiInstance.GenerateAccessToken(action);
                 Debug.WriteLine(result);
             }
@@ -486,7 +486,7 @@ Name | Type | Description  | Notes
 # **GetConfigurationItem**
 > ConfigurationItem GetConfigurationItem (string type, string scope, string code, string key, bool? reveal = null, string userId = null)
 
-[EXPERIMENTAL] GetConfigurationItem: Get the specific configuration item within an existing set
+[EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set
 
 ### Example
 ```csharp
@@ -517,7 +517,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] GetConfigurationItem: Get the specific configuration item within an existing set
+                // [EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set
                 ConfigurationItem result = apiInstance.GetConfigurationItem(type, scope, code, key, reveal, userId);
                 Debug.WriteLine(result);
             }
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 # **GetConfigurationSet**
 > ConfigurationSet GetConfigurationSet (string type, string scope, string code, bool? reveal = null, string userId = null)
 
-[EXPERIMENTAL] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
+[EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
 
 ### Example
 ```csharp
@@ -601,7 +601,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
+                // [EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
                 ConfigurationSet result = apiInstance.GetConfigurationSet(type, scope, code, reveal, userId);
                 Debug.WriteLine(result);
             }
@@ -654,7 +654,7 @@ Name | Type | Description  | Notes
 # **GetSystemConfigurationItems**
 > ResourceListOfConfigurationItem GetSystemConfigurationItems (string code, string key, bool? reveal = null)
 
-[EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+[EARLY ACCESS] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
 
 ### Example
 ```csharp
@@ -682,7 +682,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+                // [EARLY ACCESS] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
                 ResourceListOfConfigurationItem result = apiInstance.GetSystemConfigurationItems(code, key, reveal);
                 Debug.WriteLine(result);
             }
@@ -733,7 +733,7 @@ Name | Type | Description  | Notes
 # **GetSystemConfigurationSets**
 > ResourceListOfConfigurationSet GetSystemConfigurationSets (string code, bool? reveal = null)
 
-[EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+[EARLY ACCESS] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
 
 ### Example
 ```csharp
@@ -760,7 +760,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+                // [EARLY ACCESS] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
                 ResourceListOfConfigurationSet result = apiInstance.GetSystemConfigurationSets(code, reveal);
                 Debug.WriteLine(result);
             }
@@ -810,7 +810,7 @@ Name | Type | Description  | Notes
 # **ListConfigurationSets**
 > ResourceListOfConfigurationSetSummary ListConfigurationSets (string type = null, string userId = null)
 
-[EXPERIMENTAL] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
+[EARLY ACCESS] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
 
 ### Example
 ```csharp
@@ -837,7 +837,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
+                // [EARLY ACCESS] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
                 ResourceListOfConfigurationSetSummary result = apiInstance.ListConfigurationSets(type, userId);
                 Debug.WriteLine(result);
             }
@@ -886,7 +886,7 @@ Name | Type | Description  | Notes
 # **UpdateConfigurationItem**
 > ConfigurationItem UpdateConfigurationItem (string type, string scope, string code, string key, UpdateConfigurationItem updateConfigurationItem, string userId = null)
 
-[EXPERIMENTAL] UpdateConfigurationItem: Update a configuration item's value and/or description
+[EARLY ACCESS] UpdateConfigurationItem: Update a configuration item's value and/or description
 
 ### Example
 ```csharp
@@ -917,7 +917,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] UpdateConfigurationItem: Update a configuration item's value and/or description
+                // [EARLY ACCESS] UpdateConfigurationItem: Update a configuration item's value and/or description
                 ConfigurationItem result = apiInstance.UpdateConfigurationItem(type, scope, code, key, updateConfigurationItem, userId);
                 Debug.WriteLine(result);
             }
@@ -971,7 +971,7 @@ Name | Type | Description  | Notes
 # **UpdateConfigurationSet**
 > ConfigurationSet UpdateConfigurationSet (string type, string scope, string code, UpdateConfigurationSet updateConfigurationSet, string userId = null)
 
-[EXPERIMENTAL] UpdateConfigurationSet: Update the description of a configuration set
+[EARLY ACCESS] UpdateConfigurationSet: Update the description of a configuration set
 
 ### Example
 ```csharp
@@ -1001,7 +1001,7 @@ namespace Example
 
             try
             {
-                // [EXPERIMENTAL] UpdateConfigurationSet: Update the description of a configuration set
+                // [EARLY ACCESS] UpdateConfigurationSet: Update the description of a configuration set
                 ConfigurationSet result = apiInstance.UpdateConfigurationSet(type, scope, code, updateConfigurationSet, userId);
                 Debug.WriteLine(result);
             }
