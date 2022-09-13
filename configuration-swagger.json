@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.323",
+    "version": "0.1.325",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -492,6 +492,37 @@
           }
         ],
         "x-fbn-apistatus": "EarlyAccess"
+      },
+      "head": {
+        "tags": [
+          "ConfigurationSets"
+        ],
+        "summary": "[BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user",
+        "operationId": "CheckAccessTokenExists",
+        "responses": {
+          "200": {
+            "description": "The Personal Access Token exists"
+          },
+          "404": {
+            "description": "The Personal Access Token does not exist"
+          },
+          "default": {
+            "description": "Error response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LusidProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [ ]
+          }
+        ],
+        "x-fbn-apistatus": "Beta"
       },
       "delete": {
         "tags": [

@@ -5,6 +5,7 @@ All URIs are relative to *https://www.lusid.com/configuration*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AddConfigurationToSet**](ConfigurationSetsApi.md#addconfigurationtoset) | **POST** /api/sets/{type}/{scope}/{code}/items | [EARLY ACCESS] AddConfigurationToSet: Add a configuration item to an existing set
+[**CheckAccessTokenExists**](ConfigurationSetsApi.md#checkaccesstokenexists) | **HEAD** /api/sets/personal/me | [BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
 [**CreateConfigurationSet**](ConfigurationSetsApi.md#createconfigurationset) | **POST** /api/sets | [EARLY ACCESS] CreateConfigurationSet: Create a configuration set
 [**DeleteAccessToken**](ConfigurationSetsApi.md#deleteaccesstoken) | **DELETE** /api/sets/personal/me | [EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
 [**DeleteConfigurationItem**](ConfigurationSetsApi.md#deleteconfigurationitem) | **DELETE** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
@@ -98,6 +99,75 @@ Name | Type | Description  | Notes
 | **201** | Success |  -  |
 | **400** | The details of the input related failure |  -  |
 | **404** | No configuration set exists with the provided identifiers |  -  |
+| **0** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="checkaccesstokenexists"></a>
+# **CheckAccessTokenExists**
+> void CheckAccessTokenExists ()
+
+[BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Finbourne.Configuration.Sdk.Api;
+using Finbourne.Configuration.Sdk.Client;
+using Finbourne.Configuration.Sdk.Model;
+
+namespace Example
+{
+    public class CheckAccessTokenExistsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://www.lusid.com/configuration";
+            // Configure OAuth2 access token for authorization: oauth2
+            config.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ConfigurationSetsApi(config);
+
+            try
+            {
+                // [BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
+                apiInstance.CheckAccessTokenExists();
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ConfigurationSetsApi.CheckAccessTokenExists: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | The Personal Access Token exists |  -  |
+| **404** | The Personal Access Token does not exist |  -  |
 | **0** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
