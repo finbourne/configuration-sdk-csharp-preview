@@ -24,3 +24,4 @@ This C# SDK (Preview) supports `Production`, `Early Access`, `Beta` and `Experim
 | branch | status |
 | --- | --- |
 | `master` |  ![Nuget](https://img.shields.io/nuget/v/Finbourne.Configuration.Sdk.Preview?color=blue) [![Build](https://github.com/finbourne/configuration-sdk-csharp-preview/actions/workflows/build.yaml/badge.svg?branch=master)](https://github.com/finbourne/configuration-sdk-csharp-preview/actions/workflows/build.yaml) |
+
