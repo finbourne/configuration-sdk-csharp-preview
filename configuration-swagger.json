@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.365",
+    "version": "0.1.366",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -3030,15 +3030,18 @@
           "scope": {
             "maxLength": 512,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "The scope used to identify an entity"
           },
           "code": {
             "maxLength": 512,
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "description": "The code used to identify an entity"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Identifiers of an entity"
       },
       "ResourceListOfAccessControlledResource": {
         "required": [
