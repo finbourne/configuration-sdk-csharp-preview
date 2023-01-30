@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.404",
+    "version": "0.1.407",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -81,9 +81,7 @@
             "in": "query",
             "description": "Whether the configuration set is Personal or Shared",
             "schema": {
-              "type": "string",
-              "description": "Whether the configuration set is Personal or Shared",
-              "nullable": true
+              "type": "string"
             }
           },
           {
@@ -94,9 +92,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user.",
-              "nullable": true
+              "type": "string"
             }
           }
         ],
@@ -108,52 +104,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationSetSummary"
                 },
-                "example": {
-  "values": [
-    {
-      "id": {
-        "scope": "official",
-        "code": "system-a-config"
-      },
-      "type": "shared"
-    }
-  ],
-  "links": []
-}
+                "example": {"values":[{"id":{"scope":"official","code":"system-a-config"},"type":"shared"}],"links":[]}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationSetSummary"
                 },
-                "example": {
-  "values": [
-    {
-      "id": {
-        "scope": "official",
-        "code": "system-a-config"
-      },
-      "type": "shared"
-    }
-  ],
-  "links": []
-}
+                "example": {"values":[{"id":{"scope":"official","code":"system-a-config"},"type":"shared"}],"links":[]}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationSetSummary"
                 },
-                "example": {
-  "values": [
-    {
-      "id": {
-        "scope": "official",
-        "code": "system-a-config"
-      },
-      "type": "shared"
-    }
-  ],
-  "links": []
-}
+                "example": {"values":[{"id":{"scope":"official","code":"system-a-config"},"type":"shared"}],"links":[]}
               }
             }
           },
@@ -210,9 +173,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user.",
-              "nullable": true
+              "type": "string"
             }
           }
         ],
@@ -223,138 +184,50 @@
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationSet"
               },
-              "example": {
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared",
-  "description": "All the config related to System A"
-}
+              "example": {"id":{"scope":"official","code":"system-a-config"},"type":"shared","description":"All the config related to System A"}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationSet"
               },
-              "example": {
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared",
-  "description": "All the config related to System A"
-}
+              "example": {"id":{"scope":"official","code":"system-a-config"},"type":"shared","description":"All the config related to System A"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationSet"
               },
-              "example": {
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared",
-  "description": "All the config related to System A"
-}
+              "example": {"id":{"scope":"official","code":"system-a-config"},"type":"shared","description":"All the config related to System A"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationSet"
               },
-              "example": {
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared",
-  "description": "All the config related to System A"
-}
+              "example": {"id":{"scope":"official","code":"system-a-config"},"type":"shared","description":"All the config related to System A"}
             }
           },
           "required": true
         },
         "responses": {
           "201": {
-            "description": "Success",
+            "description": "Created",
             "content": {
               "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               }
             }
           },
@@ -410,9 +283,7 @@
             "in": "query",
             "description": "action=regenerate = Even if an existing parameter exists, forcibly regenerate a new one (deleting the old)\r\naction=ensure = If no parameter exists, create one. If one does already exist, verify that it is still valid (call a service?), and if so, return it. If it is not still valid, then regenerate a new one.\r\naction=default = If a parameter exists, return it. If not then create one. If this parameter is not provided, this is the default behaviour.",
             "schema": {
-              "type": "string",
-              "description": "action=regenerate = Even if an existing parameter exists, forcibly regenerate a new one (deleting the old)\r\naction=ensure = If no parameter exists, create one. If one does already exist, verify that it is still valid (call a service?), and if so, return it. If it is not still valid, then regenerate a new one.\r\naction=default = If a parameter exists, return it. If not then create one. If this parameter is not provided, this is the default behaviour.",
-              "nullable": true
+              "type": "string"
             }
           }
         ],
@@ -424,34 +295,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/PersonalAccessToken"
                 },
-                "example": {
-  "value": "**********",
-  "type": "Secret",
-  "description": "An access token representing the current user",
-  "ref": "config://personal/me/012345"
-}
+                "example": {"value":"**********","type":"Secret","description":"An access token representing the current user","ref":"config://personal/me/012345"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PersonalAccessToken"
                 },
-                "example": {
-  "value": "**********",
-  "type": "Secret",
-  "description": "An access token representing the current user",
-  "ref": "config://personal/me/012345"
-}
+                "example": {"value":"**********","type":"Secret","description":"An access token representing the current user","ref":"config://personal/me/012345"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PersonalAccessToken"
                 },
-                "example": {
-  "value": "**********",
-  "type": "Secret",
-  "description": "An access token representing the current user",
-  "ref": "config://personal/me/012345"
-}
+                "example": {"value":"**********","type":"Secret","description":"An access token representing the current user","ref":"config://personal/me/012345"}
               }
             }
           },
@@ -532,7 +388,7 @@
         "operationId": "DeleteAccessToken",
         "responses": {
           "204": {
-            "description": "Success"
+            "description": "No Content"
           },
           "default": {
             "description": "Error response",
@@ -570,8 +426,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The code that identifies a system configuration set"
+              "type": "string"
             }
           },
           {
@@ -579,8 +434,7 @@
             "in": "query",
             "description": "Whether to reveal the secrets",
             "schema": {
-              "type": "boolean",
-              "description": "Whether to reveal the secrets"
+              "type": "boolean"
             },
             "x-nullable": true
           }
@@ -593,157 +447,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationSet"
                 },
-                "example": {
-  "values": [
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Shared System configuration A",
-      "items": [
-        {
-          "key": "password",
-          "value": "a super secret password",
-          "valueType": "text",
-          "isSecret": true,
-          "ref": "config://shared/system/system-config-set-a/password"
-        }
-      ],
-      "id": {
-        "scope": "system",
-        "code": "system-config-set-a"
-      },
-      "type": "shared"
-    },
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Personal System configuration A",
-      "items": [
-        {
-          "key": "password",
-          "value": "a super secret password",
-          "valueType": "text",
-          "isSecret": true,
-          "ref": "config://personal//system/system-config-set-a/password"
-        }
-      ],
-      "id": {
-        "scope": "system",
-        "code": "system-config-set-a"
-      },
-      "type": "personal"
-    }
-  ],
-  "links": []
-}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"shared"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"personal"}],"links":[]}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationSet"
                 },
-                "example": {
-  "values": [
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Shared System configuration A",
-      "items": [
-        {
-          "key": "password",
-          "value": "a super secret password",
-          "valueType": "text",
-          "isSecret": true,
-          "ref": "config://shared/system/system-config-set-a/password"
-        }
-      ],
-      "id": {
-        "scope": "system",
-        "code": "system-config-set-a"
-      },
-      "type": "shared"
-    },
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Personal System configuration A",
-      "items": [
-        {
-          "key": "password",
-          "value": "a super secret password",
-          "valueType": "text",
-          "isSecret": true,
-          "ref": "config://personal//system/system-config-set-a/password"
-        }
-      ],
-      "id": {
-        "scope": "system",
-        "code": "system-config-set-a"
-      },
-      "type": "personal"
-    }
-  ],
-  "links": []
-}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"shared"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"personal"}],"links":[]}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationSet"
                 },
-                "example": {
-  "values": [
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Shared System configuration A",
-      "items": [
-        {
-          "key": "password",
-          "value": "a super secret password",
-          "valueType": "text",
-          "isSecret": true,
-          "ref": "config://shared/system/system-config-set-a/password"
-        }
-      ],
-      "id": {
-        "scope": "system",
-        "code": "system-config-set-a"
-      },
-      "type": "shared"
-    },
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Personal System configuration A",
-      "items": [
-        {
-          "key": "password",
-          "value": "a super secret password",
-          "valueType": "text",
-          "isSecret": true,
-          "ref": "config://personal//system/system-config-set-a/password"
-        }
-      ],
-      "id": {
-        "scope": "system",
-        "code": "system-config-set-a"
-      },
-      "type": "personal"
-    }
-  ],
-  "links": []
-}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"shared"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"personal"}],"links":[]}
               }
             }
           },
@@ -823,8 +539,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The code that identifies a system configuration set"
+              "type": "string"
             }
           },
           {
@@ -836,8 +551,7 @@
               "maxLength": 256,
               "minLength": 1,
               "pattern": "^[^_][a-zA-Z0-9\\-_]*$",
-              "type": "string",
-              "description": "The key that identifies a system configuration item"
+              "type": "string"
             }
           },
           {
@@ -845,8 +559,7 @@
             "in": "query",
             "description": "Whether to reveal the secrets",
             "schema": {
-              "type": "boolean",
-              "description": "Whether to reveal the secrets"
+              "type": "boolean"
             },
             "x-nullable": true
           }
@@ -859,103 +572,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationItem"
                 },
-                "example": {
-  "values": [
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Shared System item A",
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/system/system-config-item-a/password"
-    },
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Personal System item A",
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://personal//system/system-config-item-a/password"
-    }
-  ],
-  "links": []
-}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-item-a/password"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-item-a/password"}],"links":[]}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationItem"
                 },
-                "example": {
-  "values": [
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Shared System item A",
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/system/system-config-item-a/password"
-    },
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Personal System item A",
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://personal//system/system-config-item-a/password"
-    }
-  ],
-  "links": []
-}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-item-a/password"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-item-a/password"}],"links":[]}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationItem"
                 },
-                "example": {
-  "values": [
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Shared System item A",
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/system/system-config-item-a/password"
-    },
-    {
-      "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-      "createdBy": "user",
-      "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-      "lastModifiedBy": "user",
-      "description": "Personal System item A",
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://personal//system/system-config-item-a/password"
-    }
-  ],
-  "links": []
-}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-item-a/password"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-item-a/password"}],"links":[]}
               }
             }
           },
@@ -1032,8 +661,7 @@
             "description": "Whether the configuration set is Personal or Shared",
             "required": true,
             "schema": {
-              "type": "string",
-              "description": "Whether the configuration set is Personal or Shared"
+              "type": "string"
             }
           },
           {
@@ -1045,8 +673,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The scope that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -1058,8 +685,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The code that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -1067,8 +693,7 @@
             "in": "query",
             "description": "Whether to reveal the secrets. This is only available when the userId query setting has not been specified.",
             "schema": {
-              "type": "boolean",
-              "description": "Whether to reveal the secrets. This is only available when the userId query setting has not been specified."
+              "type": "boolean"
             },
             "x-nullable": true
           },
@@ -1080,9 +705,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user.",
-              "nullable": true
+              "type": "string"
             }
           }
         ],
@@ -1094,79 +717,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               }
             }
           },
@@ -1241,8 +804,7 @@
             "description": "Whether the configuration set is Personal or Shared",
             "required": true,
             "schema": {
-              "type": "string",
-              "description": "Whether the configuration set is Personal or Shared"
+              "type": "string"
             }
           },
           {
@@ -1254,8 +816,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The scope that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -1267,8 +828,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The code that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -1279,9 +839,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user.",
-              "nullable": true
+              "type": "string"
             }
           }
         ],
@@ -1292,33 +850,25 @@
               "schema": {
                 "$ref": "#/components/schemas/UpdateConfigurationSet"
               },
-              "example": {
-  "description": "The group of configurations related to System A and B"
-}
+              "example": {"description":"The group of configurations related to System A and B"}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateConfigurationSet"
               },
-              "example": {
-  "description": "The group of configurations related to System A and B"
-}
+              "example": {"description":"The group of configurations related to System A and B"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateConfigurationSet"
               },
-              "example": {
-  "description": "The group of configurations related to System A and B"
-}
+              "example": {"description":"The group of configurations related to System A and B"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateConfigurationSet"
               },
-              "example": {
-  "description": "The group of configurations related to System A and B"
-}
+              "example": {"description":"The group of configurations related to System A and B"}
             }
           },
           "required": true
@@ -1331,79 +881,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               }
             }
           },
@@ -1478,8 +968,7 @@
             "description": "Whether the configuration set is Personal or Shared",
             "required": true,
             "schema": {
-              "type": "string",
-              "description": "Whether the configuration set is Personal or Shared"
+              "type": "string"
             }
           },
           {
@@ -1491,8 +980,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The scope that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -1504,8 +992,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The code that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -1516,15 +1003,13 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user.",
-              "nullable": true
+              "type": "string"
             }
           }
         ],
         "responses": {
           "204": {
-            "description": "Success"
+            "description": "No Content"
           },
           "400": {
             "description": "The details of the input related failure",
@@ -1599,8 +1084,7 @@
             "description": "Whether the configuration set is Personal or Shared",
             "required": true,
             "schema": {
-              "type": "string",
-              "description": "Whether the configuration set is Personal or Shared"
+              "type": "string"
             }
           },
           {
@@ -1612,8 +1096,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The scope that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -1625,8 +1108,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The code that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -1637,9 +1119,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user.",
-              "nullable": true
+              "type": "string"
             }
           }
         ],
@@ -1650,134 +1130,50 @@
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationItem"
               },
-              "example": {
-  "key": "password",
-  "value": "a super secret password",
-  "valueType": "text",
-  "isSecret": false,
-  "description": "Password for System A"
-}
+              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A"}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationItem"
               },
-              "example": {
-  "key": "password",
-  "value": "a super secret password",
-  "valueType": "text",
-  "isSecret": false,
-  "description": "Password for System A"
-}
+              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationItem"
               },
-              "example": {
-  "key": "password",
-  "value": "a super secret password",
-  "valueType": "text",
-  "isSecret": false,
-  "description": "Password for System A"
-}
+              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationItem"
               },
-              "example": {
-  "key": "password",
-  "value": "a super secret password",
-  "valueType": "text",
-  "isSecret": false,
-  "description": "Password for System A"
-}
+              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A"}
             }
           },
           "required": true
         },
         "responses": {
           "201": {
-            "description": "Success",
+            "description": "Created",
             "content": {
               "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "All the config related to System A",
-  "items": [
-    {
-      "key": "password",
-      "value": "a super secret password",
-      "valueType": "text",
-      "isSecret": true,
-      "ref": "config://shared/official/system-a-config/password"
-    }
-  ],
-  "id": {
-    "scope": "official",
-    "code": "system-a-config"
-  },
-  "type": "shared"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               }
             }
           },
@@ -1854,8 +1250,7 @@
             "description": "Whether the configuration set is Personal or Shared",
             "required": true,
             "schema": {
-              "type": "string",
-              "description": "Whether the configuration set is Personal or Shared"
+              "type": "string"
             }
           },
           {
@@ -1867,8 +1262,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The scope that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -1880,8 +1274,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The code that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -1893,8 +1286,7 @@
               "maxLength": 256,
               "minLength": 1,
               "pattern": "^[^_][a-zA-Z0-9\\-_]*$",
-              "type": "string",
-              "description": "The key that identifies a configuration item"
+              "type": "string"
             }
           },
           {
@@ -1902,8 +1294,7 @@
             "in": "query",
             "description": "Whether to reveal the secrets. This is only available when the userId query setting has not been specified.",
             "schema": {
-              "type": "boolean",
-              "description": "Whether to reveal the secrets. This is only available when the userId query setting has not been specified."
+              "type": "boolean"
             },
             "x-nullable": true
           },
@@ -1915,9 +1306,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user.",
-              "nullable": true
+              "type": "string"
             }
           }
         ],
@@ -1929,52 +1318,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "a super secret password",
-  "key": "password",
-  "value": "Password for System A",
-  "valueType": "text",
-  "isSecret": true,
-  "ref": "config://shared/official/system-a-config/password"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "a super secret password",
-  "key": "password",
-  "value": "Password for System A",
-  "valueType": "text",
-  "isSecret": true,
-  "ref": "config://shared/official/system-a-config/password"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "a super secret password",
-  "key": "password",
-  "value": "Password for System A",
-  "valueType": "text",
-  "isSecret": true,
-  "ref": "config://shared/official/system-a-config/password"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
               }
             }
           },
@@ -2049,8 +1405,7 @@
             "description": "Whether the configuration set is Personal or Shared",
             "required": true,
             "schema": {
-              "type": "string",
-              "description": "Whether the configuration set is Personal or Shared"
+              "type": "string"
             }
           },
           {
@@ -2062,8 +1417,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The scope that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -2075,8 +1429,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The code that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -2088,8 +1441,7 @@
               "maxLength": 256,
               "minLength": 1,
               "pattern": "^[^_][a-zA-Z0-9\\-_]*$",
-              "type": "string",
-              "description": "The key that identifies a configuration item"
+              "type": "string"
             }
           },
           {
@@ -2100,9 +1452,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user.",
-              "nullable": true
+              "type": "string"
             }
           }
         ],
@@ -2113,37 +1463,25 @@
               "schema": {
                 "$ref": "#/components/schemas/UpdateConfigurationItem"
               },
-              "example": {
-  "value": "updated password",
-  "description": "Password for system A and B"
-}
+              "example": {"value":"updated password","description":"Password for system A and B"}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateConfigurationItem"
               },
-              "example": {
-  "value": "updated password",
-  "description": "Password for system A and B"
-}
+              "example": {"value":"updated password","description":"Password for system A and B"}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateConfigurationItem"
               },
-              "example": {
-  "value": "updated password",
-  "description": "Password for system A and B"
-}
+              "example": {"value":"updated password","description":"Password for system A and B"}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateConfigurationItem"
               },
-              "example": {
-  "value": "updated password",
-  "description": "Password for system A and B"
-}
+              "example": {"value":"updated password","description":"Password for system A and B"}
             }
           },
           "required": true
@@ -2156,52 +1494,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "a super secret password",
-  "key": "password",
-  "value": "Password for System A",
-  "valueType": "text",
-  "isSecret": true,
-  "ref": "config://shared/official/system-a-config/password"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "a super secret password",
-  "key": "password",
-  "value": "Password for System A",
-  "valueType": "text",
-  "isSecret": true,
-  "ref": "config://shared/official/system-a-config/password"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {
-  "createdAt": "0001-01-01T00:00:00.0000000+00:00",
-  "createdBy": "user",
-  "lastModifiedAt": "0001-01-01T00:00:00.0000000+00:00",
-  "lastModifiedBy": "user",
-  "description": "a super secret password",
-  "key": "password",
-  "value": "Password for System A",
-  "valueType": "text",
-  "isSecret": true,
-  "ref": "config://shared/official/system-a-config/password"
-}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
               }
             }
           },
@@ -2276,8 +1581,7 @@
             "description": "Whether the configuration set is Personal or Shared",
             "required": true,
             "schema": {
-              "type": "string",
-              "description": "Whether the configuration set is Personal or Shared"
+              "type": "string"
             }
           },
           {
@@ -2289,8 +1593,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The scope that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -2302,8 +1605,7 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "The code that identifies a configuration set"
+              "type": "string"
             }
           },
           {
@@ -2315,8 +1617,7 @@
               "maxLength": 256,
               "minLength": 1,
               "pattern": "^[^_][a-zA-Z0-9\\-_]*$",
-              "type": "string",
-              "description": "The key that identifies a configuration item"
+              "type": "string"
             }
           },
           {
@@ -2327,15 +1628,13 @@
               "maxLength": 64,
               "minLength": 1,
               "pattern": "^[a-zA-Z0-9\\-_]+$",
-              "type": "string",
-              "description": "Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user.",
-              "nullable": true
+              "type": "string"
             }
           }
         ],
         "responses": {
           "204": {
-            "description": "Success"
+            "description": "No Content"
           },
           "400": {
             "description": "The details of the input related failure",
@@ -2407,6 +1706,7 @@
         "type": "object",
         "properties": {
           "description": {
+            "minLength": 1,
             "type": "string"
           },
           "action": {
@@ -2445,6 +1745,7 @@
             "nullable": true
           },
           "description": {
+            "minLength": 1,
             "type": "string"
           },
           "actions": {
@@ -2516,6 +1817,7 @@
             "format": "date-time"
           },
           "createdBy": {
+            "minLength": 1,
             "type": "string",
             "description": "Who created the configuration item"
           },
@@ -2525,6 +1827,7 @@
             "format": "date-time"
           },
           "lastModifiedBy": {
+            "minLength": 1,
             "type": "string",
             "description": "Who modified the configuration item most recently"
           },
@@ -2534,14 +1837,17 @@
             "nullable": true
           },
           "key": {
+            "minLength": 1,
             "type": "string",
             "description": "The key which identifies the configuration item"
           },
           "value": {
+            "minLength": 1,
             "type": "string",
             "description": "The value of the configuration item"
           },
           "valueType": {
+            "minLength": 1,
             "type": "string",
             "description": "The type of the configuration item's value"
           },
@@ -2550,6 +1856,7 @@
             "description": "Defines whether or not the value is a secret."
           },
           "ref": {
+            "minLength": 1,
             "type": "string",
             "description": "The reference to the configuration item",
             "readOnly": true
@@ -2576,14 +1883,17 @@
         "type": "object",
         "properties": {
           "key": {
+            "minLength": 1,
             "type": "string",
             "description": "The key which identifies the configuration item"
           },
           "value": {
+            "minLength": 1,
             "type": "string",
             "description": "The value of the configuration item"
           },
           "valueType": {
+            "minLength": 1,
             "type": "string",
             "description": "The type of the configuration item's value"
           },
@@ -2592,6 +1902,7 @@
             "description": "Defines whether or not the value is a secret."
           },
           "ref": {
+            "minLength": 1,
             "type": "string",
             "description": "The reference to the configuration item",
             "readOnly": true
@@ -2624,6 +1935,7 @@
             "format": "date-time"
           },
           "createdBy": {
+            "minLength": 1,
             "type": "string",
             "description": "Who created the configuration set"
           },
@@ -2633,6 +1945,7 @@
             "format": "date-time"
           },
           "lastModifiedBy": {
+            "minLength": 1,
             "type": "string",
             "description": "Who modified the configuration set most recently"
           },
@@ -2653,6 +1966,7 @@
             "$ref": "#/components/schemas/ResourceId"
           },
           "type": {
+            "minLength": 1,
             "type": "string",
             "description": "The type (personal or shared) of the configuration set"
           },
@@ -2678,6 +1992,7 @@
             "$ref": "#/components/schemas/ResourceId"
           },
           "type": {
+            "minLength": 1,
             "type": "string",
             "description": "The type (personal or shared) of the configuration set"
           },
@@ -2745,6 +2060,7 @@
             "$ref": "#/components/schemas/ResourceId"
           },
           "type": {
+            "minLength": 1,
             "type": "string",
             "description": "The type (personal or shared) of the new configuration set"
           },
@@ -2774,12 +2090,15 @@
             "format": "int32"
           },
           "name": {
+            "minLength": 1,
             "type": "string"
           },
           "displayName": {
+            "minLength": 1,
             "type": "string"
           },
           "description": {
+            "minLength": 1,
             "type": "string"
           },
           "required": {
@@ -2810,7 +2129,7 @@
             }
           },
           "actions": {
-            "minLength": 1,
+            "minItems": 1,
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ActionId"
@@ -2864,6 +2183,7 @@
         "type": "object",
         "properties": {
           "name": {
+            "minLength": 1,
             "type": "string"
           },
           "errorDetails": {
@@ -2900,18 +2220,9 @@
           "instance": {
             "type": "string",
             "nullable": true
-          },
-          "extensions": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "object",
-              "additionalProperties": false
-            },
-            "nullable": true,
-            "readOnly": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": { }
       },
       "LusidValidationProblemDetails": {
         "required": [
@@ -2921,6 +2232,7 @@
         "type": "object",
         "properties": {
           "name": {
+            "minLength": 1,
             "type": "string"
           },
           "errorDetails": {
@@ -2967,18 +2279,9 @@
           "instance": {
             "type": "string",
             "nullable": true
-          },
-          "extensions": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "object",
-              "additionalProperties": false
-            },
-            "nullable": true,
-            "readOnly": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": { }
       },
       "PersonalAccessToken": {
         "required": [
@@ -2990,21 +2293,25 @@
         "type": "object",
         "properties": {
           "value": {
+            "minLength": 1,
             "type": "string",
             "description": "Value of the Personal Access Token.",
             "readOnly": true
           },
           "type": {
+            "minLength": 1,
             "type": "string",
             "description": "The type of the Personal Access Token.",
             "readOnly": true
           },
           "description": {
+            "minLength": 1,
             "type": "string",
             "description": "The description of the Personal Access Token.",
             "readOnly": true
           },
           "ref": {
+            "minLength": 1,
             "type": "string",
             "description": "The reference to the Personal Access Token",
             "readOnly": true
