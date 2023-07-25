@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.450",
+    "version": "0.1.451",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -275,7 +275,7 @@
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token",
+        "summary": "[DEPRECATED] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token",
         "operationId": "GenerateAccessToken",
         "parameters": [
           {
@@ -347,13 +347,13 @@
             "oauth2": [ ]
           }
         ],
-        "x-fbn-apistatus": "EarlyAccess"
+        "x-fbn-apistatus": "Deprecated"
       },
       "head": {
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user",
+        "summary": "[DEPRECATED] CheckAccessTokenExists: Check the Personal Access Token exists for the current user",
         "operationId": "CheckAccessTokenExists",
         "responses": {
           "200": {
@@ -378,13 +378,13 @@
             "oauth2": [ ]
           }
         ],
-        "x-fbn-apistatus": "Beta"
+        "x-fbn-apistatus": "Deprecated"
       },
       "delete": {
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user",
+        "summary": "[DEPRECATED] DeleteAccessToken: Delete any stored Personal Access Token for the current user",
         "operationId": "DeleteAccessToken",
         "responses": {
           "204": {
@@ -406,7 +406,7 @@
             "oauth2": [ ]
           }
         ],
-        "x-fbn-apistatus": "EarlyAccess"
+        "x-fbn-apistatus": "Deprecated"
       }
     },
     "/api/sets/system/{code}": {

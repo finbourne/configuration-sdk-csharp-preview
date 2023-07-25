@@ -5,12 +5,12 @@ All URIs are relative to *https://www.lusid.com/configuration*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AddConfigurationToSet**](ConfigurationSetsApi.md#addconfigurationtoset) | **POST** /api/sets/{type}/{scope}/{code}/items | [EARLY ACCESS] AddConfigurationToSet: Add a configuration item to an existing set
-[**CheckAccessTokenExists**](ConfigurationSetsApi.md#checkaccesstokenexists) | **HEAD** /api/sets/personal/me | [BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
+[**CheckAccessTokenExists**](ConfigurationSetsApi.md#checkaccesstokenexists) | **HEAD** /api/sets/personal/me | [DEPRECATED] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
 [**CreateConfigurationSet**](ConfigurationSetsApi.md#createconfigurationset) | **POST** /api/sets | [EARLY ACCESS] CreateConfigurationSet: Create a configuration set
-[**DeleteAccessToken**](ConfigurationSetsApi.md#deleteaccesstoken) | **DELETE** /api/sets/personal/me | [EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+[**DeleteAccessToken**](ConfigurationSetsApi.md#deleteaccesstoken) | **DELETE** /api/sets/personal/me | [DEPRECATED] DeleteAccessToken: Delete any stored Personal Access Token for the current user
 [**DeleteConfigurationItem**](ConfigurationSetsApi.md#deleteconfigurationitem) | **DELETE** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
 [**DeleteConfigurationSet**](ConfigurationSetsApi.md#deleteconfigurationset) | **DELETE** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
-[**GenerateAccessToken**](ConfigurationSetsApi.md#generateaccesstoken) | **PUT** /api/sets/personal/me | [EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+[**GenerateAccessToken**](ConfigurationSetsApi.md#generateaccesstoken) | **PUT** /api/sets/personal/me | [DEPRECATED] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
 [**GetConfigurationItem**](ConfigurationSetsApi.md#getconfigurationitem) | **GET** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set
 [**GetConfigurationSet**](ConfigurationSetsApi.md#getconfigurationset) | **GET** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
 [**GetSystemConfigurationItems**](ConfigurationSetsApi.md#getsystemconfigurationitems) | **GET** /api/sets/system/{code}/items/{key} | [EARLY ACCESS] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 # **CheckAccessTokenExists**
 > void CheckAccessTokenExists ()
 
-[BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
+[DEPRECATED] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
 
 ### Example
 ```csharp
@@ -132,7 +132,7 @@ namespace Example
 
             try
             {
-                // [BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
+                // [DEPRECATED] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
                 apiInstance.CheckAccessTokenExists();
             }
             catch (ApiException  e)
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 # **DeleteAccessToken**
 > void DeleteAccessToken ()
 
-[EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+[DEPRECATED] DeleteAccessToken: Delete any stored Personal Access Token for the current user
 
 ### Example
 ```csharp
@@ -277,7 +277,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+                // [DEPRECATED] DeleteAccessToken: Delete any stored Personal Access Token for the current user
                 apiInstance.DeleteAccessToken();
             }
             catch (ApiException  e)
@@ -482,7 +482,7 @@ void (empty response body)
 # **GenerateAccessToken**
 > PersonalAccessToken GenerateAccessToken (string action = null)
 
-[EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+[DEPRECATED] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
 
 ### Example
 ```csharp
@@ -508,7 +508,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+                // [DEPRECATED] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
                 PersonalAccessToken result = apiInstance.GenerateAccessToken(action);
                 Debug.WriteLine(result);
             }
