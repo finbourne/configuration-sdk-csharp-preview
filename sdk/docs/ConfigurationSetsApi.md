@@ -11,10 +11,10 @@ Method | HTTP request | Description
 [**DeleteConfigurationItem**](ConfigurationSetsApi.md#deleteconfigurationitem) | **DELETE** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
 [**DeleteConfigurationSet**](ConfigurationSetsApi.md#deleteconfigurationset) | **DELETE** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
 [**GenerateAccessToken**](ConfigurationSetsApi.md#generateaccesstoken) | **PUT** /api/sets/personal/me | [DEPRECATED] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
-[**GetConfigurationItem**](ConfigurationSetsApi.md#getconfigurationitem) | **GET** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set
-[**GetConfigurationSet**](ConfigurationSetsApi.md#getconfigurationset) | **GET** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
+[**GetConfigurationItem**](ConfigurationSetsApi.md#getconfigurationitem) | **GET** /api/sets/{type}/{scope}/{code}/items/{key} | GetConfigurationItem: Get the specific configuration item within an existing set
+[**GetConfigurationSet**](ConfigurationSetsApi.md#getconfigurationset) | **GET** /api/sets/{type}/{scope}/{code} | GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
 [**GetSystemConfigurationItems**](ConfigurationSetsApi.md#getsystemconfigurationitems) | **GET** /api/sets/system/{code}/items/{key} | [EARLY ACCESS] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
-[**GetSystemConfigurationSets**](ConfigurationSetsApi.md#getsystemconfigurationsets) | **GET** /api/sets/system/{code} | [EARLY ACCESS] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+[**GetSystemConfigurationSets**](ConfigurationSetsApi.md#getsystemconfigurationsets) | **GET** /api/sets/system/{code} | GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
 [**ListConfigurationSets**](ConfigurationSetsApi.md#listconfigurationsets) | **GET** /api/sets | [EARLY ACCESS] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
 [**UpdateConfigurationItem**](ConfigurationSetsApi.md#updateconfigurationitem) | **PUT** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] UpdateConfigurationItem: Update a configuration item&#39;s value and/or description
 [**UpdateConfigurationSet**](ConfigurationSetsApi.md#updateconfigurationset) | **PUT** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] UpdateConfigurationSet: Update the description of a configuration set
@@ -556,7 +556,7 @@ Name | Type | Description  | Notes
 # **GetConfigurationItem**
 > ConfigurationItem GetConfigurationItem (string type, string scope, string code, string key, bool? reveal = null, string userId = null)
 
-[EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set
+GetConfigurationItem: Get the specific configuration item within an existing set
 
 ### Example
 ```csharp
@@ -587,7 +587,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set
+                // GetConfigurationItem: Get the specific configuration item within an existing set
                 ConfigurationItem result = apiInstance.GetConfigurationItem(type, scope, code, key, reveal, userId);
                 Debug.WriteLine(result);
             }
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 # **GetConfigurationSet**
 > ConfigurationSet GetConfigurationSet (string type, string scope, string code, bool? reveal = null, string userId = null)
 
-[EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
+GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
 
 ### Example
 ```csharp
@@ -671,7 +671,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
+                // GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
                 ConfigurationSet result = apiInstance.GetConfigurationSet(type, scope, code, reveal, userId);
                 Debug.WriteLine(result);
             }
@@ -803,7 +803,7 @@ Name | Type | Description  | Notes
 # **GetSystemConfigurationSets**
 > ResourceListOfConfigurationSet GetSystemConfigurationSets (string code, bool? reveal = null)
 
-[EARLY ACCESS] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
 
 ### Example
 ```csharp
@@ -830,7 +830,7 @@ namespace Example
 
             try
             {
-                // [EARLY ACCESS] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+                // GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
                 ResourceListOfConfigurationSet result = apiInstance.GetSystemConfigurationSets(code, reveal);
                 Debug.WriteLine(result);
             }
