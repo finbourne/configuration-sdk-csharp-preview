@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.543",
+    "version": "0.1.544",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -215,19 +215,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               }
             }
           },
@@ -447,19 +447,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationSet"
                 },
-                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"shared"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"personal"}],"links":[]}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-set-a/password","blockReveal":false}],"id":{"scope":"system","code":"system-config-set-a"},"type":"shared"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-set-a/password","blockReveal":false}],"id":{"scope":"system","code":"system-config-set-a"},"type":"personal"}],"links":[]}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationSet"
                 },
-                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"shared"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"personal"}],"links":[]}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-set-a/password","blockReveal":false}],"id":{"scope":"system","code":"system-config-set-a"},"type":"shared"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-set-a/password","blockReveal":false}],"id":{"scope":"system","code":"system-config-set-a"},"type":"personal"}],"links":[]}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationSet"
                 },
-                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"shared"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-set-a/password"}],"id":{"scope":"system","code":"system-config-set-a"},"type":"personal"}],"links":[]}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-set-a/password","blockReveal":false}],"id":{"scope":"system","code":"system-config-set-a"},"type":"shared"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System configuration A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-set-a/password","blockReveal":false}],"id":{"scope":"system","code":"system-config-set-a"},"type":"personal"}],"links":[]}
               }
             }
           },
@@ -572,19 +572,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationItem"
                 },
-                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-item-a/password"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-item-a/password"}],"links":[]}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-item-a/password","blockReveal":false},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-item-a/password","blockReveal":false}],"links":[]}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationItem"
                 },
-                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-item-a/password"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-item-a/password"}],"links":[]}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-item-a/password","blockReveal":false},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-item-a/password","blockReveal":false}],"links":[]}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResourceListOfConfigurationItem"
                 },
-                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-item-a/password"},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-item-a/password"}],"links":[]}
+                "example": {"values":[{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Shared System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/system/system-config-item-a/password","blockReveal":false},{"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"Personal System item A","key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://personal//system/system-config-item-a/password","blockReveal":false}],"links":[]}
               }
             }
           },
@@ -717,19 +717,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               }
             }
           },
@@ -881,19 +881,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               }
             }
           },
@@ -1130,25 +1130,25 @@
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationItem"
               },
-              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A"}
+              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A","blockReveal":false}
             },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationItem"
               },
-              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A"}
+              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A","blockReveal":false}
             },
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationItem"
               },
-              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A"}
+              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A","blockReveal":false}
             },
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/CreateConfigurationItem"
               },
-              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A"}
+              "example": {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A","blockReveal":false}
             }
           },
           "required": true
@@ -1161,19 +1161,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationSet"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"All the config related to System A","items":[{"key":"password","value":"a super secret password","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}],"id":{"scope":"official","code":"system-a-config"},"type":"shared"}
               }
             }
           },
@@ -1318,19 +1318,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}
               }
             }
           },
@@ -1494,19 +1494,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}
               },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}
               },
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ConfigurationItem"
                 },
-                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password"}
+                "example": {"createdAt":"0001-01-01T00:00:00.0000000+00:00","createdBy":"user","lastModifiedAt":"0001-01-01T00:00:00.0000000+00:00","lastModifiedBy":"user","description":"a super secret password","key":"password","value":"Password for System A","valueType":"text","isSecret":true,"ref":"config://shared/official/system-a-config/password","blockReveal":false}
               }
             }
           },
@@ -1799,6 +1799,7 @@
       },
       "ConfigurationItem": {
         "required": [
+          "blockReveal",
           "createdAt",
           "createdBy",
           "isSecret",
@@ -1861,6 +1862,10 @@
             "description": "The reference to the configuration item",
             "readOnly": true
           },
+          "blockReveal": {
+            "type": "boolean",
+            "description": "Defines whether the value is blocked with non-internal request."
+          },
           "links": {
             "type": "array",
             "items": {
@@ -1874,6 +1879,7 @@
       },
       "ConfigurationItemSummary": {
         "required": [
+          "blockReveal",
           "isSecret",
           "key",
           "ref",
@@ -1906,6 +1912,10 @@
             "type": "string",
             "description": "The reference to the configuration item",
             "readOnly": true
+          },
+          "blockReveal": {
+            "type": "boolean",
+            "description": "Defines whether the value is blocked with non-internal request."
           },
           "links": {
             "type": "array",
@@ -2044,6 +2054,10 @@
             "type": "string",
             "description": "The description of the new configuration item",
             "nullable": true
+          },
+          "blockReveal": {
+            "type": "boolean",
+            "description": "A property to indicate if revealing the value is blocked."
           }
         },
         "additionalProperties": false,
